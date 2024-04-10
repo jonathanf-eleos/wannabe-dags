@@ -5,11 +5,16 @@ defaultAirflowTag: "2.7.3"
 # Airflow version (Used to make some decisions based on Airflow Version being deployed)
 airflowVersion: "2.7.3"
 
-gitSync:
-    enabled: true
-    repo: https://github.com/jonathanf-eleos/wannabe-dags.git
-    branch: main
-    rev: HEAD
-    dest: repo
-    depth: 1
-    subPath: "dags"
+dags:
+  gitSync:
+      enabled: true
+      repo: "https://github.com/jonathanf-eleos/wannabe-dags.git"
+      branch: main
+      subPath: "dags"
+
+worker:
+  extraPipPackages:
+  - "celery"
+  - "torch"
+
+executor: "CeleryKubernetesExecutor"
