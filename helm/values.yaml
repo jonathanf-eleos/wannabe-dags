@@ -9,7 +9,7 @@ dags:
   gitSync:
       enabled: true
       repo: "https://github.com/jonathanf-eleos/wannabe-dags.git"
-      branch: main
+      branch: dev
       subPath: "dags"
 
 worker:
