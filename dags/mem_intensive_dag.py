@@ -10,7 +10,7 @@ def memory_intensive_task():
 
 dag = DAG(
     'memory_intensive_dag',
-    schedule_interval=None,
+    schedule_interval="* * * * *",
     catchup=False,
     default_args={
         'owner': 'airflow',

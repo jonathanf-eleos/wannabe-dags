@@ -12,7 +12,7 @@ def cpu_intensive_task():
 
 dag = DAG(
     'cpu_intensive_dag',
-    schedule_interval=None,
+    schedule_interval="* * * * *",
     catchup=False,
     default_args={
         'owner': 'airflow',
