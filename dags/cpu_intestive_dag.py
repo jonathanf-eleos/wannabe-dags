@@ -7,8 +7,9 @@ from datetime import datetime
 
 def cpu_intensive_task():
     # Simulate CPU-intensive computation
-    for _ in range(10**7):
-        random.random()
+    for i in range(1000000):
+        for _ in range(10**7):
+            random.random()
 
 dag = DAG(
     'cpu_intensive_dag',

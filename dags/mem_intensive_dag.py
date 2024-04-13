@@ -6,7 +6,8 @@ from datetime import datetime
 
 def memory_intensive_task():
     # Simulate memory-intensive operation
-    large_array = np.random.rand(10**7)
+    for i in range(1000000):
+        large_array = np.random.rand(10**7)
 
 dag = DAG(
     'memory_intensive_dag',
