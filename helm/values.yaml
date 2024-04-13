@@ -16,5 +16,6 @@ worker:
   extraPipPackages:
   - "celery"
   - "torch"
+  - "numpy"
 
 executor: "CeleryKubernetesExecutor"
