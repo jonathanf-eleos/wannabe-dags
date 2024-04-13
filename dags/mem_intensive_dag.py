@@ -1,6 +1,8 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 import numpy as np
+from datetime import datetime
+
 
 def memory_intensive_task():
     # Simulate memory-intensive operation
